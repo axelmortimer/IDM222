@@ -1,16 +1,21 @@
 * { box-sizing: border-box; }
 
-.row {
-  overflow: auto;
-  margin-bottom: 16px;
+html {
+	background-color: #f9f9f9;
 }
+
+.row {
+  	overflow: auto;
+  	margin-bottom: 1rem;
+}
+
 .row::after {
     content: "";
     clear: both;
     display: block;
 }
 
-.col-1  { width: 8.33%; }
+.col-1 	{ width: 8.33%; }
 .col-2  { width: 16.66%; }
 .col-3  { width: 25%; }
 .col-4  { width: 33.33%; }
@@ -24,6 +29,6 @@
 .col-12 { width: 100%; }
 
 [class*="col-"] {
-  float: left;
-  padding: 1rem;
+  	float: left;
+  	padding: 1rem;
 }
