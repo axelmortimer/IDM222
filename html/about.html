@@ -9,42 +9,39 @@
  	<link rel="stylesheet" href="../css/master.css">
 </head>
 <body>
-	<header class="row">
-		<div class="col-12">
-			<div class="col-6">
-				<h1><a href="index.html">Axel Mortimer</a></h1>
-			</div>
-			<nav class="col-6">
-				<a href="#menu" id="hamburger">
-  					<img src="../menu.png" alt="menu button">
+	<header>
+		<h1><a href="index.html">Axel Mortimer</a></h1>
+		<nav>
+			<div id="hamburger">
+				<a href="#menu">
+					<picture>
+						<source media="(min-width: 35rem)" srcset="../menu.png">
+						<img src="../menu-small.png" alt="menu button">
+					</picture>	
 				</a>
-				<ul>
-					<li><a href="about.html">About</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="playlists.html">Playlists</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
+			</div>
+			<ul>
+				<li><a href="about.html"><b>About</b></a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="playlists.html">Playlists</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
 	</header>
-	<div class="row">
-		<div class="col-5">
-			<picture id="img-container">
-     			<source media="(min-width: 75rem)" srcset="../prof-large.jpg" class="profile-pic">
-     			<source media="(min-width: 48rem)" srcset="../prof-medium.jpg" class="profile-pic">
-    			<img src="../prof-small.jpg" alt="profile picture" class="profile-pic">
-   			</picture>
-   			<a href="#" id="resume-button">VIEW RESUME</a>
-		</div>
-		<div class="col-7" id="personal-info">
+	<main id="main-about">
+		<div id="img-resume-container">
+			<picture>
+	   			<source media="(min-width: 78.75rem)" srcset="../prof-large.jpg" class="profile-pic">
+	     		<source media="(min-width: 48rem)" srcset="../prof-medium.jpg" class="profile-pic">
+	    		<img src="../prof-small.jpg" alt="profile picture" class="profile-pic">
+	  	 	</picture>
+	   		<a href="#" id="resume-button">VIEW RESUME</a>
+	   	</div>
+		<div id="bio">
 			<p>My name is Axel Mortimer. I was born on November 8, 1996 in Doylestown, PA. I graduated Summa Cum Laude from Central Bucks East High School and attended Penn State for a year before transferring to Drexel University as a sophomore, where I am currently studying for a degree in Interactive Digital Media. As an Interactive Digital Media major, I seek to create a more ubiquitous and seamless user experience across all human-computer interfaces. Whether it is as simple as messaging your family, or as complicated as navigating virutal reality, interacting with technology should never be a frustrating experience; technology should always feel like it is an extension of yourself.</p>
 			<p>Growing up, I was always fascinated by not just technology, but how quickly it was growing and impacting our lives in unforseen ways. This would continue into high school, where I would take multiple programming courses, and eventually my freshman year of college, where I would major in Computer Science. However, there is something important that I felt was lacking in programming, and most of this new internet age; a stunning lack of human compassion and understanding. The most brilliant innovators the world had to offer were creating amazing products, but they all felt poorly designed and cumbersome. What we need now is not more programmers, but those who can bridge the gap between the user and their 21st century tools.</p>
 			<p>When I'm not going to school, studying, or working on projects, much of my time is spent listening to music and going to live shows. I make an effort each summer to go as many music festivals as many possible, and they are consistently the highlight of my year. Just like a squirrel collects acorn in the fall before hibernation, I go to these festivals to collect the "good vibes" which I can carry with me through the school year. All joking aside, I would suggest music festivals to anyone with even a modicum of interest in live music. As an extension of this, I am trying to learn some instruments myself, but I still have a long road ahead of me. I also enjoy some occassional hiking and would like to travel the world once I graduate.</p>
 		</div>
 	</main>
-</body>
-</html>
-
-		</div>
-	</div>
 </body>
 </html>

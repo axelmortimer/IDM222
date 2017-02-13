@@ -9,53 +9,41 @@
  	<link rel="stylesheet" href="../css/master.css">
 </head>
 <body>
-	<header class="row">
-		<div class="col-12">
-			<div class="col-6">
-				<h1><a href="index.html">Axel Mortimer</a></h1>
-			</div>
-			<nav class="col-6">
-				<a href="#menu" id="hamburger">
-  					<img src="../menu.png" alt="menu button">
+	<header>
+		<h1><a href="index.html">Axel Mortimer</a></h1>
+		<nav>
+			<div id="hamburger">
+				<a href="#menu">
+					<picture>
+						<source media="(min-width: 35rem)" srcset="../menu.png">
+						<img src="../menu-small.png" alt="menu button">
+					</picture>	
 				</a>
-				<ul>
-					<li><a href="about.html">About</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="playlists.html">Playlists</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
+			</div>
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="projects.html"><b>Projects</b></a></li>
+				<li><a href="playlists.html">Playlists</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
 	</header>
-	<div class="row">
-		<div class="col-9">
-			<div class="col-3">
-				<picture>
-					<!-- <source media="(min-width: 1080px)" srcset="http://placehold.it/400x400">
-		     		<source media="(min-width: 720px)" srcset="http://placehold.it/300x300"> -->
-		    		<img src="http://placehold.it/200x200" alt="project picture">
-				</picture>
-				<h2 class="project-title">Project Title</h2>
-				<h4 class="project-des">Project Description</h4>
-			</div>
-			<div class="col-3">
-				<picture>
-					<!-- <source media="(min-width: 1080px)" srcset="http://placehold.it/400x400">
-		     		<source media="(min-width: 720px)" srcset="http://placehold.it/300x300"> -->
-		    		<img src="http://placehold.it/200x200" alt="project picture">
-				</picture>
-				<h2 class="project-title">Gorilla Vs. Bear Redesign</h2>
-				<h4 class="project-des">Project Description</h4>
-			</div>
-			<div class="col-3">
-				<picture>
-					<!-- <source media="(min-width: 1080px)" srcset="http://placehold.it/400x400">
-		     		<source media="(min-width: 720px)" srcset="http://placehold.it/300x300"> -->
-		    		<img src="http://placehold.it/200x200" alt="project picture">
-				</picture>
-				<h2 class="project-title">Google Play Music Redesign</h2>
-				<h4 class="project-des">Project Description</h4>
-			</div>
+	<main id="main-projects">	
+		<div class="project">
+			<img src="http://placehold.it/300x300" alt="project picture">
+			<h2>Project Title</h2>
+			<h4>Project Description</h4>
 		</div>
-	</div>
+		<div class="project">
+			<img src="http://placehold.it/300x300" alt="project picture">
+			<h2>Gorilla Vs. Bear Redesign</h2>
+			<h4>Project Description</h4>
+		</div>
+		<div class="project">
+			<img src="http://placehold.it/300x300" alt="project picture">
+			<h2>Google Play Music Redesign</h2>
+			<h4>Project Description</h4>
+		</div>
+	</main>
 </body>
 </html>

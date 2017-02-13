@@ -1,3 +1,5 @@
+/* ----- GLOBAL ----- */
+
 * { box-sizing: border-box; }
 
 html {
@@ -6,46 +8,44 @@ html {
 	background-color: #f9f9f9;
 }
 
-body {
-	padding-top: 4rem;
-}
-
-.row {
-  	overflow: auto;
-  	margin-bottom: 1rem;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
-[class*="col-"] {
-	width: 100%;
-  	float: left;
-  	padding: 1rem;
-}
-
-h1, h3, ul {
+h1, h2, h3, ul {
 	font-family: 'Patua One', cursive;
 }
 
+body {
+	margin-top: 4.5rem;
+}
+
+main {
+	width: 80%;
+	margin: 1rem auto;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+
+/* ----- NAVIGATION BAR ----- */
+
 header {
 	width: 100%;
-	background-color: white;
+	height: 3.5rem;
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 4rem;
-	border-bottom: 1px solid #cecece;
+	background-color: white;
+	border-bottom: 1px solid lightgray;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
 }
 
 header h1 {
-	width: 90%;
-	text-align: left;
-	margin: -0.8rem;
+	height: 3.5rem;
 	font-size: 1.5rem;
+	margin: 0;
+	padding: 0.8rem;
 }
 
 header h1 a {
@@ -54,46 +54,52 @@ header h1 a {
 }
 
 #hamburger {
-	margin: -3.2rem .2rem -3.5rem 0rem;
-	width: 10%;
-	float: right;
-	position: absolute;
-    right: 0px;
+	height: 3.5rem;
+	padding: 1rem;
+	margin-right: 0.25rem;
 }
 
 nav ul {
 	display: none;
+	font-size: 0.75rem;
+	height: 3.5rem;
+	list-style: none;
+	margin-right: 1rem;
 }
+
+nav ul li {
+	margin: 0.7rem 1rem 0rem 1rem;
+}
+
+
+/* ----- HOME ----- */
 
 footer {
 	width: 100%;
-	position: fixed; 
-    bottom: 0%;
-    height: 5.5rem;
-    border-top: 1px solid #cecece;
-    background-color: white;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	border-top: 1px solid lightgray;
 }
 
 footer h3 {
-	font-size: 1.5rem;
 	text-align: center;
 }
 
-#img-container {
-	text-align: center;
-	display: block;
+.transparent {
+	opacity: 0.7;
+}
+
+
+/* ----- ABOUT ----- */
+
+#img-resume-container {
 	margin: 1rem auto;
 }
 
-.profile-pic {
+#main-about div picture img {
 	border-radius: 50%;
-}
-
-#personal-info {
-	font-size: 16px;
-	margin-top: -1rem;
-	padding-left: 3rem;
-	padding-right: 3rem;
 }
 
 #resume-button {
@@ -105,90 +111,82 @@ footer h3 {
 	background-color: #c1c1c1;
 	border-radius: 3px;
 	margin: 1rem auto;
+	margin-bottom: 1rem;
 	font-size: 0.75rem;
 	text-decoration: none;
 	color: black;
 }
 
-#project-grid {
+
+/* ----- PROJECTS ----- */
+
+.project {
+	width: 100%;
 	margin: 1rem auto;
 }
 
-.project-title {
-	font-size: 1.2rem;
+.project h2, h4 {
+	margin: 0.25rem;
 }
 
-.project-des {
-	font-size: 0.8rem;
-}
 
-.contact-links {
-	text-decoration: none;
-	color: black;
-}
+/* ----- RESPONSIVE CSS ----- */
 
-footer div div {
-	text-align: center;
+@media (min-width: 35rem) {
+	html {
+		font-size: 20px;
+	}
+
+	#hamburger {
+		padding: 0.85rem;
+	}
+
+	#main-about p {
+		font-size: 0.8rem;
+	}
 }
 
 @media (min-width: 48rem) {
-	.col-1 	{ width: 8.33%; }
-	.col-2  { width: 16.66%; }
-	.col-3  { width: 25%; }
-	.col-4  { width: 33.33%; }
-	.col-5  { width: 41.66%; }
-	.col-6  { width: 50%; }
-	.col-7  { width: 58.33%; }
-	.col-8  { width: 66.66%; }
-	.col-9  { width: 75%; }
-	.col-10 { width: 83.33%; }
-	.col-11 { width: 91.66%; }
-	.col-12 { width: 100%; }
-
-	nav {
-		margin: -1rem 0rem 0rem 0rem;
-		font-size: 0.8rem;
+	#hamburger {
+		display: none;
 	}
 
 	nav ul {
-		display: inline;
-		list-style: none;
-		float: right;
-		margin: 0;
-		padding: 0;
-	}
-	
-	nav ul li {
-		padding: 0.2rem;
-		margin: 0.8rem;
-		display: inline-block;
-    	text-align: center;
-    	width: 3rem;
+		display: flex;
+		align-content: center;
 	}
 
 	nav ul li a {
 		color: black;
 		text-decoration: none;
 	}
-
-	#hamburger {
-		display: none;
-	}
-
-	#personal-info {
-		margin-top: 1rem;
-	}
-
 }
 
-@media (min-width: 75rem) {
-	html {
-		font-size: 20px;
+@media (min-width: 60rem) {
+	#main-about {
+		width: 90%;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+	}
+
+	#img-resume-container {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	#bio {
+		width: 50%;
+		padding-right: 1rem;
 	}
 }
 
-@media (min-width: 100rem) {
+@media (min-width: 90rem) {
 	html {
 		font-size: 22px;
+	}
+
+	#bio {
+		width: 55%;
+		padding-right: 1rem;
 	}
 }
