@@ -167,11 +167,14 @@ footer h3 {
 }
 
 .contact-button {
-	display: block;
 	width: 100%;
 	height: 4rem;
 	line-height: 4rem;
 	text-align: center;
+}
+
+.contact-button a {
+	display: block;
 }
 
 #email {
