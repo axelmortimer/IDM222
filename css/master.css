@@ -8,7 +8,7 @@ html {
 	background-color: #f9f9f9;
 }
 
-h1, h2, h3, ul {
+h1, h2, h3, ul, #footer-contact {
 	font-family: 'Patua One', cursive;
 }
 
@@ -121,12 +121,73 @@ footer h3 {
 /* ----- PROJECTS ----- */
 
 .project {
-	width: 100%;
 	margin: 1rem auto;
 }
 
 .project h2, h4 {
 	margin: 0.25rem;
+	width: 275px;
+}
+
+.project h4 {
+	font-size: 0.8rem;
+}
+
+#invisible {
+	visibility: hidden;
+}
+
+
+/* ----- PLAYLISTS ----- */
+
+.playlist-info {
+	margin: 1rem auto;
+}
+
+.test-box {
+	margin: 1rem auto;
+	width: 100%;
+	height: 18.75rem;
+	background-color: darkgrey;
+	border: 2px solid black;
+}
+
+
+/* ----- CONTACT ----- */
+
+#footer-contact {
+	height: auto;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+#footer-contact div a {
+	text-decoration: none;
+	color: white;
+}
+
+.contact-button {
+	display: block;
+	width: 100%;
+	height: 4rem;
+	line-height: 4rem;
+	text-align: center;
+}
+
+#email {
+	background-color: #ea4335;
+}
+
+#facebook {
+	background-color: #3b5998;
+}
+
+#twitter {
+	background-color: #1da1f2;
+}
+
+#linkedin {
+	background-color: #0077b5;
 }
 
 
@@ -142,6 +203,10 @@ footer h3 {
 	}
 
 	#main-about p {
+		font-size: 0.8rem;
+	}
+
+	.playlist-info p {
 		font-size: 0.8rem;
 	}
 }
@@ -160,13 +225,42 @@ footer h3 {
 		color: black;
 		text-decoration: none;
 	}
+
+	#main-projects {
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+
+	.projects {
+		margin: 1rem;
+	}
+
+	#main-playlists {
+		width: 90%;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.playlist-info, .test-box {
+		width: 45%;
+		margin: 1rem auto;
+	}
+
+	#footer-contact {
+		flex-flow: row wrap;
+	}
+
+	.contact-button {
+		width: 50%;
+	}
 }
 
 @media (min-width: 60rem) {
 	#main-about {
 		width: 90%;
 		flex-flow: row nowrap;
-		justify-content: space-around;
+		justify-content: center;
 	}
 
 	#img-resume-container {
@@ -180,6 +274,20 @@ footer h3 {
 	}
 }
 
+@media (min-width: 56.25rem) {
+	.projects {
+		width: 300px;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+@media (min-width: 75rem) {
+	.contact-button {
+		width: 25%;
+	}
+}
+
 @media (min-width: 90rem) {
 	html {
 		font-size: 22px;
@@ -188,5 +296,9 @@ footer h3 {
 	#bio {
 		width: 55%;
 		padding-right: 1rem;
+	}
+
+	.projects {
+		width: 350px;
 	}
 }
