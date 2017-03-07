@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
   	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
   	<title>Axel Mortimer - Home</title>
-  	<link href="https://fonts.googleapis.com/css?family=Lato|Patua+One" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   	<link rel="stylesheet" href="../css/normalize.css">
  	<link rel="stylesheet" href="../css/master.css">
 </head>
 <body>
-	<header class="transparent">
-		<h1><a href="index.html">Axel Mortimer</a></h1>
-		<nav>
-			<div id="hamburger">
-				<a href="#menu">
-					<picture>
-						<source media="(min-width: 35rem)" srcset="../menu.png">
-						<img src="../menu-small.png" alt="menu button">
-					</picture>	
-				</a>
-			</div>
-			<ul>
-				<li><a href="about.html">About</a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="playlists.html">Playlists</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
+	<header>
+		<h1 class="centered"><a href="index.html">Axel Mortimer</a></h1>
 	</header>
-	<div id="gif-container">
-		<picture>
-			<!-- GIF -->
-		</picture>
+	<div class="home-overlay">
+		<div class="darken"></div>
+		<div class="center-container">
+			<img src="../prof-small.jpg" alt="profile picture">
+			<h1>Aspiring UX Designer</h1>
+		</div>
 	</div>
-	<footer class="transparent">
-		<h3>Coder. Designer. Student.</h3>
+	<div class="video-container">
+		<video autoplay loop muted>
+			<source src="../homepagevideo.mp4" />
+		</video>
+	</div>
+	<footer>
+		<ul>
+			<li><a href="about.html">About</a></li>
+			<li><a href="projects.html">Portfolio</a></li>
+			<li><a href="playlists.html">Playlists</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
 	</footer>
 </body>
 </html>
