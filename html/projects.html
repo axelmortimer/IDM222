@@ -3,69 +3,36 @@
 <head>
 	<meta charset="UTF-8">
   	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-  	<title>Axel Mortimer - Portfolio</title>
+  	<title>Portfolio - Axel Mortimer</title>
   	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
   	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   	<link rel="stylesheet" href="../css/normalize.css">
  	<link rel="stylesheet" href="../css/master.css">
+ 	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous">
+  	</script>
 </head>
 <body>
 	<header>
-		<h1><a href="index.html">Axel Mortimer</a></h1>
+		<div class="name">
+			<a href="index.html">Axel Mortimer</a>
+		</div>
 		<nav>
 			<div id="hamburger">
-				<a href="#menu">
-					<picture>
-						<source media="(min-width: 35rem)" srcset="../menu.png">
-						<img src="../menu-small.png" alt="menu button">
-					</picture>	
-				</a>
+				<img src="../menu.svg" alt="menu-icon">
 			</div>
 			<ul>
-				<li><a href="about.html">About</a></li>
-				<li><a href="projects.html"><b>Portfolio</b></a></li>
+				<li><a href="about.html"><b>About</b></a></li>
+				<li><a href="projects.html">Portfolio</a></li>
 				<li><a href="playlists.html">Playlists</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main id="main-projects">	
-		<div class="project">
-			<picture>
-				<source media="(min-width: 90rem)" srcset="https://placehold.it/350x350">
-				<source media="(min-width: 56.25rem)" srcset="https://placehold.it/300x300">
-				<img src="https://placehold.it/275x275" alt="project picture">
-			</picture>
-			<h2>Project Title</h2>
-			<h4>Project Description</h4>
-		</div>
-		<div class="project">
-			<picture>
-				<source media="(min-width: 90rem)" srcset="../gvb-large.jpg">
-				<source media="(min-width: 56.25rem)" srcset="../gvb-medium.jpg">
-				<img src="../gvb-small.jpg" alt="project picture">
-			</picture>
-			<h2>Gorilla Vs. Bear Redesign</h2>
-			<h4>(IN PROGRESS) Goal is to make the website responsive and to reduce screen clutter/media accessibility.</h4>
-		</div>
-		<div class="project">
-			<picture>
-				<source media="(min-width: 90rem)" srcset="../gmusic-large.jpg">
-				<source media="(min-width: 56.25rem)" srcset="../gmusic-medium.jpg">
-				<img src="../gmusic-small.jpg" alt="project picture">
-			</picture>
-			<h2>Google Play Music Redesign</h2>
-			<h4>Fixed the random and haphazard information architecture of the 2016 version of the website.</h4>
-		</div>
-		<div class="project" id="invisible">
-			<picture>
-				<source media="(min-width: 90rem)" srcset="https://placehold.it/350x350">
-				<source media="(min-width: 56.25rem)" srcset="https://placehold.it/300x300">
-				<img src="https://placehold.it/275x275" alt="project picture">
-			</picture>
-			<h2>Google Play Music Redesign</h2>
-			<h4>Project Description</h4>
-		</div>
+		
 	</main>
 </body>
 </html>

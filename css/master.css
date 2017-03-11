@@ -5,10 +5,13 @@
 html {
 	font-size: 100%;
 	font-family: 'Lato', sans-serif;
-	background-color: #f9f9f9;
+	background-image: url('../background.jpg');
+	background-size: cover;
+	background-position: 50%;
+	background-attachment: fixed;
 }
 
-h1, h2, h3, ul, #footer-contact {
+h1, h2, h3, ul, .name, #footer-contact {
 	font-family: 'Patua One', cursive;
 }
 
@@ -42,45 +45,37 @@ header {
 	z-index: 900;
 
 	display: flex;
-	flex-direction: row;
+	flex-direction: row nowrap;
 	justify-content: space-between;
 	align-content: center;
 }
 
-header h1 {
-	height: 3.5rem;
-	font-size: 1.5rem;
-	margin: 0;
-	padding: 0.8rem;
-}
-
-header h1 a {
+.name a {
 	text-decoration: none;
 	color: black;
-}
-
-#hamburger {
+	display: block;
+	font-size: 2rem;
 	height: 3.5rem;
-	padding: 1rem;
-	margin-right: 0.25rem;
+	line-height: 3.5rem;
+	padding: 0 1rem;
+	transition: all .4s ease;
 }
 
-nav ul {
-	display: none;
-	font-size: 0.75rem;
-	height: 3.5rem;
-	list-style: none;
-	margin-right: 1rem;
+.name a:hover, .name a:active {
+	background-color: gray;
+	color: white;
 }
 
-nav ul li {
-	margin: 0.7rem 1rem 0rem 1rem;
+nav ul li a:hover, nav ul li a:active {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
 }
 
 
 /* ----- HOME ----- */
 
-.centered {
+.name-index {
 	text-align: center;
 	width: 100%;
 }
@@ -122,34 +117,41 @@ nav ul li {
 
 footer {
 	width: 100%;
+	height: 5.1875rem;
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	background-color: white;
-	border-top: 1px solid lightgray;
 }
 
 footer ul {
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: 0;
+	display: flex;
+	flex-flow: row nowrap;
 }
 
 footer ul li {
-	display: block;
-	text-align: center;
-	margin: 1rem auto;
+	width: 25%;
+	list-style: none;
 }
 
 footer ul li a {
+	width: 100%;
+	height: 5.1875rem;
+	line-height: 5.1875rem;
+	margin-top: -1rem;
+	text-align: center;
+	display: block;
 	text-decoration: none;
 	color: black;
+	transition: all .4s ease;
 }
 
-footer ul li a:hover {
-	text-decoration: underline;
+footer ul li a:hover, footer ul li a:active {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
 }
 
 .video-container {
@@ -187,6 +189,15 @@ footer ul li a:hover {
 	font-size: 0.75rem;
 	text-decoration: none;
 	color: black;
+}
+
+#resume-button:hover, #resume-button:active {
+	background-color: gray;
+	color: white;
+}
+
+#bio {
+	line-height: 1.25rem;
 }
 
 
@@ -271,12 +282,9 @@ footer ul li a:hover {
 		font-size: 20px;
 	}
 
-	#hamburger {
-		padding: 0.85rem;
-	}
-
-	#main-about p {
+	#bio {
 		font-size: 0.8rem;
+		line-height: 1.1rem;
 	}
 
 	.playlist-info p {
@@ -290,22 +298,31 @@ footer ul li a:hover {
 	}
 
 	nav ul {
+		height: 3.5rem;
+		font-size: 0.75rem;
+		list-style: none;
+		margin: 0 1rem 0 0;
 		display: flex;
-		align-content: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	nav ul li {
+		height: 3.5rem;
 	}
 
 	nav ul li a {
+		display: block;
+		height: 100%;
+		width: 100%;
+		padding: 0 0.1rem;
+		text-align: center;
+		line-height: 3.5rem;
+		margin: 0 1rem;
 		color: black;
 		text-decoration: none;
-	}
-
-	#main-projects {
-		flex-flow: row wrap;
-		justify-content: space-around;
-	}
-
-	.projects {
-		margin: 1rem;
+		border-left: 0.1px solid #efefef;
+		transition: background-color .4s ease, color .4s ease;
 	}
 
 	#main-playlists {
@@ -329,18 +346,14 @@ footer ul li a:hover {
 	}
 }
 
-@media (min-width: 56.25rem) {
-	.projects {
-		width: 300px;
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-}
-
 @media (min-width: 60rem) {
+	nav ul li a {
+		transition: all .4s ease;
+	}
+
 	#main-about {
 		width: 100%;
-		height: 100%;
+		height: 80vh;
 		flex-flow: row nowrap;
 		justify-content: center;
 		align-items: center;
@@ -348,7 +361,6 @@ footer ul li a:hover {
 
 	#img-resume-container {
 		width: 40%;
-		height: 100%;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
@@ -357,7 +369,6 @@ footer ul li a:hover {
 
 	#bio {
 		width: 60%;
-		height: 100%;
 		padding-right: 2rem;
 		display: flex;
 		flex-flow: column nowrap;
@@ -372,7 +383,8 @@ footer ul li a:hover {
 	}
 
 	#bio {
-		font-size: 2rem;
+		font-size: 0.8rem;
+		padding-left: 1rem;
 		padding-right: 4rem;
 	}
 }
@@ -385,13 +397,67 @@ footer ul li a:hover {
 	#bio {
 		width: 55%;
 		padding-right: 6rem;
+
+	}
+}
+
+/* ---- HAMBURGER MENU ---- */
+
+@media (max-width: 48rem) {
+	#hamburger {
+		height: 3.5rem;
+		margin-right: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	.projects {
-		width: 350px;
+	.hamburger img {
+		display: block;
+		cursor: pointer;
 	}
 
-	#invisible {
-		display: none;
+	nav ul {
+		opacity: 0;
+		position: fixed;
+		top: 3.5rem;
+		right: -50vw;
+		width: 50%;
+		height: 20rem;
+		padding: 0;
+		background-color: white;
+		list-style: none;
+		z-index: 1000;
+		box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.4);
+		display: flex;
+		flex-flow: column nowrap;
+		transition: all .5s ease;
+	}
+
+	nav ul li {
+		height: 25%;
+		width: 100%;
+		color: black;
+		font-size: 1.5rem;
+	}
+
+	nav ul li a {
+		height: 100%;
+		width: 100%;
+		line-height: 5rem;
+		text-align: center;
+		display: block;
+		text-decoration: none;
+		color: black;
+		transition: all .4s ease;
+	}
+
+	nav ul li:not(:last-child) {
+		border-bottom: 1px solid lightgray;
+	}
+
+	.display {
+		opacity: 1;
+		right: 1rem;
 	}
 }
