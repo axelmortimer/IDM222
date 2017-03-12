@@ -5,7 +5,7 @@
 html {
 	font-size: 100%;
 	font-family: 'Lato', sans-serif;
-	background-image: url('../background.jpg');
+	background-image: url('../background2.jpg');
 	background-size: cover;
 	background-position: 50%;
 	background-attachment: fixed;
@@ -201,25 +201,78 @@ footer ul li a:hover, footer ul li a:active {
 }
 
 
-/* ----- PROJECTS ----- */
+/* ----- PORTFOLIO ----- */
+
+#main-projects {
+	width: 90%;
+	margin: 0 5%;
+	display: flex;
+	flex-flow: column nowrap;
+}
 
 .project {
-	margin: 1rem auto;
+	position: relative;
+	width: 100%;
+	height: 30rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0px 5px 15px -3px rgba(0,0,0,0.75);
+	display: flex;
+	flex-flow: column nowrap;
 }
 
-.project h2, h4 {
-	margin: 0.25rem;
-	width: 275px;
+.project h1 {
+	font-size: 2.25rem;
+	margin: 1rem;
+	text-align: center;
+	color: white;
 }
 
-.project h4 {
-	font-size: 0.8rem;
+.project-info-bar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color:rgba(255, 255, 255, 0.6);
+	display: flex;
+	flex-flow: row nowrap;
 }
 
-#invisible {
-	visibility: hidden;
+.project-info {
+	width: 70%;
+	font-size: 0.90rem;
+	display: flex;
+	align-items: center;
 }
 
+.project-info p {
+	padding: 0 1rem;
+}
+
+.project-info-bar a {
+	width: 30%;
+	display: block;
+	text-align: center;
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: black;
+	border-left: 1px solid gray;
+	transition: all .4s ease;
+}
+
+.project-info-bar a:hover, .project-info-bar a:active {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
+}
+
+#gvb-redesign {
+	background-image: url("../gvb-redesign-background.jpg");
+	background-size: cover;
+	background-position: 50%;
+}
+
+#gplaymusic {
+	background-color: #ee6b03;
+}
 
 /* ----- PLAYLISTS ----- */
 
@@ -375,6 +428,16 @@ footer ul li a:hover, footer ul li a:active {
 		align-items: center;
 		justify-content: center;
 	}
+
+	.project-info {
+		justify-content: center;
+	}
+
+	.project-info p {
+		padding: 0 4rem;
+		font-size: 1rem;
+		text-align: center;
+	}	
 }
 
 @media (min-width: 75rem) {
