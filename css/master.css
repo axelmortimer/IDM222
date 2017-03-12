@@ -45,7 +45,6 @@ header {
 	z-index: 900;
 
 	display: flex;
-	flex-direction: row nowrap;
 	justify-content: space-between;
 	align-content: center;
 }
@@ -542,6 +541,10 @@ footer ul li a:hover, footer ul li a:active {
 
 	#bio {
 		font-size: 1rem;
+	}
+
+	#gplaymusic .project-images {
+		margin-top: 0;
 	}
 }
 
