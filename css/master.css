@@ -158,7 +158,6 @@ footer ul li a:hover, footer ul li a:active {
 }
 
 .video-container {
-	width: auto;
 	height: 100vh;
 	display: flex;
 	margin-top: -4.5rem;
@@ -166,6 +165,10 @@ footer ul li a:hover, footer ul li a:active {
 	align-items: center;
 	overflow: hidden;
 	z-index: 950;
+}
+
+.video-container video {
+	min-height: 100%;
 }
 
 
