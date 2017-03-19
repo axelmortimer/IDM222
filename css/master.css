@@ -96,11 +96,14 @@ nav ul li a:hover, nav ul li a:active {
 }
 
 .center-container {
-	position: absolute;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
 }
 
 .center-container img {
@@ -381,7 +384,7 @@ footer ul li a:hover, footer ul li a:active {
 
 /* ----- RESPONSIVE CSS ----- */
 
-@media (min-width: 35rem) {
+@media (min-width: 35em) {
 	html {
 		font-size: 20px;
 	}
@@ -448,7 +451,7 @@ footer ul li a:hover, footer ul li a:active {
 	}
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 60em) {
 	nav ul li a {
 		transition: all .4s ease;
 	}
@@ -482,6 +485,8 @@ footer ul li a:hover, footer ul li a:active {
 		max-height: 575px;
 	}
 
+	.
+
 	.project-info {
 		justify-content: center;
 	}
@@ -493,7 +498,7 @@ footer ul li a:hover, footer ul li a:active {
 	}	
 }
 
-@media (min-width: 75rem) {
+@media (min-width: 75em) {
 	#bio {
 		font-size: 0.8rem;
 		padding-left: 1rem;
@@ -526,9 +531,13 @@ footer ul li a:hover, footer ul li a:active {
 		align-self: center;
 		margin-top: -5rem;
 	}
+
+	.project-info-bar {
+		left: 0;
+	}
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 90em) {
 	html {
 		font-size: 22px;
 	}
