@@ -179,6 +179,10 @@ footer ul li a:hover, footer ul li a:active {
 
 #img-resume-container {
 	margin: 1rem auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 #main-about div picture img {
@@ -466,10 +470,6 @@ footer ul li a:hover, footer ul li a:active {
 
 	#img-resume-container {
 		width: 40%;
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: center;
-		align-items: center;
 	}
 
 	#bio {
@@ -553,10 +553,6 @@ footer ul li a:hover, footer ul li a:active {
 @media (min-width: 100rem) {
 	html {
 		font-size: 24px;
-	}
-
-	#bio {
-		font-size: 1rem;
 	}
 
 	#gplaymusic .project-images {
